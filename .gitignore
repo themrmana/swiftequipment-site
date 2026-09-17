@@ -5,3 +5,6 @@ Desktop.ini
 *.swp
 .vscode/
 .idea/
+
+# Internal notes, never in the public repo
+_internal/

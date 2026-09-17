@@ -15,9 +15,9 @@ Then open `http://localhost:8127`.
 
 ## What is on the page
 
-Only what Ali supplied on 17 September 2026. Nothing about what the company
-sells, where it operates or what it charges, because none of that was given.
-When there is a line to add, it goes in `index.html` under `<p class="lede">`.
+The company name, the contact details and the address. Nothing about what the
+company sells, where it operates or what it charges. When there is a line to add,
+it goes in `index.html` under `<p class="lede">`.
 
 | | |
 |---|---|
@@ -26,9 +26,7 @@ When there is a line to add, it goes in `index.html` under `<p class="lede">`.
 | Phone | +1 647 455 0532 |
 | Address | 482 South Service Road East, Unit 201, Oakville, Ontario L6J 2X6 |
 
-**The unit number is 201.** Same address as Swift Shipping, taken from the
-standing instruction that settled it against Corporations Canada and the Cogeco
-invoice. If anything ever shows 202 here, that is the error, not this.
+The unit number is **201**. If anything here ever shows 202, that is the error.
 
 ## Deploying it
 
@@ -44,14 +42,10 @@ so a bad URL looks like a Python error page in development only.
 
 ### Pointing the domain
 
-The domain sits on **Hussein's Namecheap account**, so the DNS change needs his
-login. As of 17 September 2026 it still resolves to the Namecheap parking page
-(`swiftequipment.ca` to 192.64.119.60, `www` to parkingpage.namecheap.com).
-
-In Namecheap, Domain List, Manage, Advanced DNS: delete the two parking records,
-then add whatever the host gives you. Usually a CNAME on `www` and either an
-ALIAS or an A record on the bare domain. Serve both, and make one redirect to
-the other so there is a single address.
+DNS is managed at Namecheap. In Domain List, Manage, Advanced DNS: delete the
+two parking records, then add the four GitHub Pages A records on the bare domain
+and a CNAME on `www` pointing at `themrmana.github.io`. Set the custom domain in
+the repo's Pages settings once those resolve.
 
 `index.html` and `sitemap.xml` currently name **`https://www.swiftequipment.ca/`**
 as the canonical address. If you decide the bare domain is the real one, change
