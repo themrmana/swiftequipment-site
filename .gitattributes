@@ -1,0 +1,7 @@
+# Git guessed the logo PDF was text and offered to rewrite its line endings,
+# which would corrupt it on the next checkout. Name the binaries explicitly.
+* text=auto
+*.pdf  binary
+*.png  binary
+*.ico  binary
+*.svg  text eol=lf
