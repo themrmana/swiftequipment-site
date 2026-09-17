@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.swiftequipment.ca/sitemap.xml
+Sitemap: https://swiftequipment.ca/sitemap.xml
