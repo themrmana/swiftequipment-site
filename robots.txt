@@ -1,0 +1,7 @@
+# swiftequipment.ca
+# The holding page is fine to index: it carries the company name, the
+# address and the contact details, which is everything there is so far.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.swiftequipment.ca/sitemap.xml
