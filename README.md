@@ -24,7 +24,7 @@ it goes in `index.html` under `<p class="lede">`.
 | Company | Swift Equipment Ltd. |
 | Email | Hussein@swiftequipment.ca |
 | Phone | +1 647 455 0532 |
-| Address | 482 South Service Road East, Unit 201, Oakville, Ontario L6J 2X6 |
+| Address | 482 South Service Road East, Unit 202, Oakville, Ontario L6J 2X6 |
 
 The unit number is **201**. If anything here ever shows 202, that is the error.
 
