@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Swift Equipment Ltd.">
 <meta property="og:title" content="Swift Equipment Ltd.">
-<meta property="og:description" content="Our website is on the way. Get in touch in the meantime.">
+<meta property="og:description" content="Our website is on the way. Send us a message and we'll get back to you.">
 <meta property="og:url" content="https://swiftequipment.ca/">
 <meta property="og:image" content="https://swiftequipment.ca/assets/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -32,12 +32,33 @@
     <span class="divider" aria-hidden="true"></span>
 
     <h1>Coming soon</h1>
-    <p class="lede">Our website is on the way. Until then, get in touch.</p>
+    <p class="lede">Our website is on the way. Send us a message and we'll get back to you.</p>
 
-    <ul class="contact">
-      <li><a href="mailto:Hussein@swiftequipment.ca">Hussein@swiftequipment.ca</a></li>
-      <li><a href="tel:+16474550532">+1 647 455 0532</a></li>
-    </ul>
+    <form class="enquiry" action="https://formsubmit.co/hussein@swiftequipment.ca" method="POST">
+      <!-- FormSubmit settings. _honey is a bot trap: real people never see it. -->
+      <input type="hidden" name="_subject" value="Enquiry from swiftequipment.ca">
+      <input type="hidden" name="_next" value="https://swiftequipment.ca/thanks.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <p class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </p>
+
+      <p class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </p>
+
+      <p class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </p>
+
+      <button type="submit">Send</button>
+    </form>
 
     <address>
       482 South Service Road East, Unit 202<br>
@@ -54,8 +75,6 @@
   "name": "Swift Equipment Ltd.",
   "url": "https://swiftequipment.ca/",
   "logo": "https://swiftequipment.ca/assets/img/og.png",
-  "email": "Hussein@swiftequipment.ca",
-  "telephone": "+1-647-455-0532",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "482 South Service Road East, Unit 202",

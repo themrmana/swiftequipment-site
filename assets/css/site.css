@@ -138,13 +138,116 @@ footer {
   text-transform: uppercase;
 }
 
+/* ---------------------------------------------------------------
+   Enquiry form. Replaces the published email and phone number:
+   the page no longer carries either, so nothing is there to scrape.
+   Left aligned inside a centred page, because labels above fields
+   read better than centred ones.
+   --------------------------------------------------------------- */
+
+.enquiry {
+  width: 100%;
+  max-width: 26rem;
+  margin: clamp(2rem, 5vw, 2.75rem) auto 0;
+  display: grid;
+  gap: 1rem;
+  text-align: left;
+}
+
+/* The bot trap. Off screen rather than display:none, which some bots skip. */
+.enquiry input[name="_honey"] {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.field {
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label {
+  color: var(--muted);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 1rem;      /* 16px stops iOS zooming the page on focus */
+  line-height: 1.5;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.field input:hover,
+.field textarea:hover { border-color: rgba(255, 255, 255, 0.28); }
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--paper);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 2px;
+}
+
+.enquiry button {
+  justify-self: start;
+  margin-top: 0.25rem;
+  padding: 0.7rem 1.75rem;
+  background: var(--paper);
+  border: 1px solid var(--paper);
+  border-radius: 4px;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 160ms ease;
+}
+
+.enquiry button:hover { opacity: 0.82; }
+
+.enquiry button:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 4px;
+}
+
+@media (max-width: 26rem) {
+  .enquiry button { justify-self: stretch; text-align: center; }
+}
+
 /* Entrance: each block arrives a beat after the one above it. */
 .stage > * { animation: rise 620ms cubic-bezier(0.22, 1, 0.36, 1) backwards; }
 .mark      { animation-delay:  60ms; }
 .divider   { animation-delay: 180ms; }
 h1         { animation-delay: 240ms; }
 .lede      { animation-delay: 320ms; }
-.contact   { animation-delay: 400ms; }
+.enquiry   { animation-delay: 400ms; }
 address    { animation-delay: 480ms; }
 
 @keyframes rise {
