@@ -22,9 +22,12 @@ it goes in `index.html` under `<p class="lede">`.
 | | |
 |---|---|
 | Company | Swift Equipment Ltd. |
-| Email | Hussein@swiftequipment.ca |
-| Phone | +1 647 455 0532 |
+| Contact | an enquiry form, posting to FormSubmit |
 | Address | 482 South Service Road East, Unit 202, Oakville, Ontario L6J 2X6 |
+
+No email address or phone number is published on the site, by request. The form
+in `index.html` posts to FormSubmit, which relays to the mailbox, and sends the
+visitor to `thanks.html` afterwards. A hidden `_honey` field traps bots.
 
 The unit number is **201**. If anything here ever shows 202, that is the error.
 
